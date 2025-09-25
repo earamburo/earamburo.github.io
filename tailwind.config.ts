@@ -57,6 +57,31 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom Portfolio Colors
+        neon: {
+          cyan: "hsl(var(--neon-cyan))",
+          purple: "hsl(var(--neon-purple))",
+          pink: "hsl(var(--neon-pink))",
+        },
+        electric: {
+          blue: "hsl(var(--electric-blue))",
+        },
+        space: {
+          DEFAULT: "hsl(var(--deep-space))",
+          gray: "hsl(var(--space-gray))",
+        },
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-secondary': 'var(--gradient-secondary)',
+        'gradient-bg': 'var(--gradient-bg)',
+        'gradient-card': 'var(--gradient-card)',
+      },
+      boxShadow: {
+        'glow-primary': 'var(--glow-primary)',
+        'glow-secondary': 'var(--glow-secondary)',
+        'glow-accent': 'var(--glow-accent)',
+        'elegant': 'var(--shadow-elegant)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +105,80 @@ export default {
             height: "0",
           },
         },
+        // 3D Portfolio Animations
+        "fade-in": {
+          "0%": { 
+            opacity: "0",
+            transform: "translateY(20px)" 
+          },
+          "100%": { 
+            opacity: "1",
+            transform: "translateY(0)" 
+          },
+        },
+        "float": {
+          "0%, 100%": { 
+            transform: "translateY(0px) rotateX(0deg)" 
+          },
+          "50%": { 
+            transform: "translateY(-10px) rotateX(2deg)" 
+          },
+        },
+        "glow-pulse": {
+          "0%, 100%": { 
+            boxShadow: "var(--glow-primary)" 
+          },
+          "50%": { 
+            boxShadow: "0 0 30px hsl(var(--neon-cyan) / 0.8), 0 0 50px hsl(var(--neon-cyan) / 0.4)" 
+          },
+        },
+        "rotate-y": {
+          "0%": { 
+            transform: "rotateY(0deg)" 
+          },
+          "100%": { 
+            transform: "rotateY(360deg)" 
+          },
+        },
+        "slide-in-from-right": {
+          "0%": { 
+            transform: "translateX(100%) opacity(0)" 
+          },
+          "100%": { 
+            transform: "translateX(0) opacity(1)" 
+          },
+        },
+        "hologram-flicker": {
+          "0%, 100%": { 
+            opacity: "1" 
+          },
+          "50%": { 
+            opacity: "0.8" 
+          },
+          "75%": { 
+            opacity: "0.9" 
+          },
+        },
+        "cyber-scan": {
+          "0%": { 
+            backgroundPosition: "-200% 0" 
+          },
+          "100%": { 
+            backgroundPosition: "200% 0" 
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        // Portfolio Animations
+        "fade-in": "fade-in 0.6s ease-out",
+        "float": "float 6s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 3s ease-in-out infinite",
+        "rotate-y": "rotate-y 20s linear infinite",
+        "slide-in-right": "slide-in-from-right 0.6s ease-out",
+        "hologram": "hologram-flicker 4s ease-in-out infinite",
+        "cyber-scan": "cyber-scan 2s linear infinite",
       },
     },
   },

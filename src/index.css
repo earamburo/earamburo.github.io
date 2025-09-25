@@ -2,95 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Futuristic Digital Workspace Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Deep Space Background */
+    --background: 225 39% 5%;
+    --foreground: 200 20% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card System */
+    --card: 225 25% 8%;
+    --card-foreground: 200 15% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Interactive Elements */
+    --popover: 225 30% 6%;
+    --popover-foreground: 200 20% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Neon Cyan Primary */
+    --primary: 180 100% 50%;
+    --primary-foreground: 225 39% 5%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Electric Purple Secondary */
+    --secondary: 270 100% 70%;
+    --secondary-foreground: 225 39% 5%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Tech Elements */
+    --muted: 225 20% 12%;
+    --muted-foreground: 200 8% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent Glow */
+    --accent: 300 100% 60%;
+    --accent-foreground: 225 39% 5%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Danger/Error */
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 200 20% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders & Inputs */
+    --border: 225 15% 20%;
+    --input: 225 20% 15%;
+    --ring: 180 100% 50%;
 
-    --radius: 0.5rem;
+    /* Radius for sleek UI */
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Sidebar (not used but keeping for compatibility) */
+    --sidebar-background: 225 35% 6%;
+    --sidebar-foreground: 200 15% 90%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 225 39% 5%;
+    --sidebar-accent: 270 100% 70%;
+    --sidebar-accent-foreground: 225 39% 5%;
+    --sidebar-border: 225 15% 20%;
+    --sidebar-ring: 180 100% 50%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom Portfolio Variables */
+    --neon-cyan: 180 100% 50%;
+    --neon-purple: 270 100% 70%;
+    --neon-pink: 320 100% 70%;
+    --electric-blue: 210 100% 60%;
+    --deep-space: 225 39% 5%;
+    --space-gray: 225 20% 12%;
+    --glow-intensity: 0.5;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-cyan)), hsl(var(--electric-blue)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-pink)));
+    --gradient-bg: linear-gradient(180deg, hsl(var(--deep-space)), hsl(225 35% 8%));
+    --gradient-card: linear-gradient(145deg, hsl(var(--space-gray)), hsl(225 15% 15%));
+    
+    /* Shadows & Glows */
+    --glow-primary: 0 0 20px hsl(var(--neon-cyan) / var(--glow-intensity));
+    --glow-secondary: 0 0 20px hsl(var(--neon-purple) / var(--glow-intensity));
+    --glow-accent: 0 0 30px hsl(var(--neon-pink) / 0.3);
+    --shadow-elegant: 0 10px 30px -5px hsl(225 39% 3% / 0.8);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.3s ease-in-out;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark mode uses the same futuristic theme */
+    --background: 225 39% 5%;
+    --foreground: 200 20% 98%;
+    --card: 225 25% 8%;
+    --card-foreground: 200 15% 95%;
+    --popover: 225 30% 6%;
+    --popover-foreground: 200 20% 98%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 225 39% 5%;
+    --secondary: 270 100% 70%;
+    --secondary-foreground: 225 39% 5%;
+    --muted: 225 20% 12%;
+    --muted-foreground: 200 8% 70%;
+    --accent: 300 100% 60%;
+    --accent-foreground: 225 39% 5%;
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 200 20% 98%;
+    --border: 225 15% 20%;
+    --input: 225 20% 15%;
+    --ring: 180 100% 50%;
+    --sidebar-background: 225 35% 6%;
+    --sidebar-foreground: 200 15% 90%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 225 39% 5%;
+    --sidebar-accent: 270 100% 70%;
+    --sidebar-accent-foreground: 225 39% 5%;
+    --sidebar-border: 225 15% 20%;
+    --sidebar-ring: 180 100% 50%;
   }
 }
 
@@ -100,6 +120,88 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
+    background: var(--gradient-bg);
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--space-gray));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    filter: brightness(1.2);
+  }
+}
+
+@layer components {
+  /* Glow Effects */
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+    transition: var(--transition-glow);
+  }
+  
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+    transition: var(--transition-glow);
+  }
+  
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+    transition: var(--transition-glow);
+  }
+  
+  /* Text Gradients */
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-secondary {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Interactive Animations */
+  .hover-glow:hover {
+    box-shadow: var(--glow-primary);
+    transform: translateY(-2px);
+  }
+  
+  .hover-float:hover {
+    transform: translateY(-8px);
+    transition: var(--transition-smooth);
+  }
+  
+  /* 3D Scene Container */
+  .scene-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  /* Holographic UI Elements */
+  .hologram-panel {
+    background: linear-gradient(145deg, hsl(var(--card) / 0.1), hsl(var(--card) / 0.05));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border) / 0.3);
+    box-shadow: var(--shadow-elegant);
   }
 }

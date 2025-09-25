@@ -1,0 +1,87 @@
+import { Button } from '@/components/ui/button';
+import { ChevronDown, Download, ExternalLink } from 'lucide-react';
+
+interface HeroProps {
+  onNavigate: (section: string) => void;
+}
+
+export default function Hero({ onNavigate }: HeroProps) {
+  return (
+    <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-6">
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto z-10">
+        {/* Greeting */}
+        <div className="mb-6 animate-fade-in">
+          <span className="text-lg text-primary font-medium tracking-wider">
+            HELLO, I'M
+          </span>
+        </div>
+
+        {/* Name */}
+        <h1 className="text-6xl md:text-8xl font-bold mb-6 text-gradient-primary animate-glow-pulse">
+          ALEX CHEN
+        </h1>
+
+        {/* Title */}
+        <h2 className="text-2xl md:text-3xl font-light mb-8 text-gradient-secondary">
+          Frontend Engineer & UI/UX Designer
+        </h2>
+
+        {/* Description */}
+        <p className="text-xl text-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+          I craft digital experiences where innovative technology meets 
+          beautiful design. Specializing in React, Three.js, and modern 
+          web technologies to create immersive user interfaces.
+        </p>
+
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          <Button
+            size="lg"
+            className="bg-gradient-primary hover:shadow-glow-primary text-primary-foreground font-semibold px-8 py-4 text-lg"
+            onClick={() => onNavigate('projects')}
+          >
+            View My Work
+            <ExternalLink className="ml-2 h-5 w-5" />
+          </Button>
+          
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-primary text-primary hover:bg-primary/10 hover:shadow-glow-primary px-8 py-4 text-lg"
+          >
+            Download Resume
+            <Download className="ml-2 h-5 w-5" />
+          </Button>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div 
+          className="flex flex-col items-center cursor-pointer animate-float hover-glow"
+          onClick={() => onNavigate('about')}
+        >
+          <span className="text-sm text-foreground/60 mb-2">Scroll to explore</span>
+          <ChevronDown className="h-6 w-6 text-primary animate-bounce" />
+        </div>
+      </div>
+
+      {/* Stats */}
+      <div className="absolute bottom-10 left-0 right-0">
+        <div className="max-w-4xl mx-auto grid grid-cols-3 gap-8 text-center">
+          <div className="hologram-panel p-4 rounded-lg">
+            <div className="text-2xl font-bold text-gradient-primary">50+</div>
+            <div className="text-sm text-foreground/60">Projects</div>
+          </div>
+          <div className="hologram-panel p-4 rounded-lg">
+            <div className="text-2xl font-bold text-gradient-secondary">5+</div>
+            <div className="text-sm text-foreground/60">Years Experience</div>
+          </div>
+          <div className="hologram-panel p-4 rounded-lg">
+            <div className="text-2xl font-bold text-gradient-primary">100%</div>
+            <div className="text-sm text-foreground/60">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
