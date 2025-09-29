@@ -10,7 +10,6 @@ export default function Portfolio() {
   const handleNavigate = (section: string) => {
     setCurrentSection(section);
     
-    // Smooth scroll to section
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -18,7 +17,6 @@ export default function Portfolio() {
   };
 
   useEffect(() => {
-    // Update current section based on scroll position
     const handleScroll = () => {
       const sections = ['home', 'about', 'projects', 'experience', 'contact'];
       const scrollPosition = window.scrollY + window.innerHeight / 2;
@@ -41,20 +39,12 @@ export default function Portfolio() {
 
   return (
     <div className="relative min-h-screen">
-      {/* 3D Background Scene */}
       <Scene3D />
-      
-      {/* Navigation */}
       <Navigation currentSection={currentSection} onNavigate={handleNavigate} />
-      
-      {/* Page Sections */}
       <main>
-        {/* Hero Section */}
         <div id="home">
           <Hero onNavigate={handleNavigate} />
         </div>
-
-        {/* About Section */}
         <div id="about" className="min-h-screen flex items-center justify-center">
           <div className="hologram-panel p-12 rounded-2xl max-w-4xl mx-6">
             <h2 className="text-4xl font-bold mb-8 text-gradient-primary text-center">
@@ -101,13 +91,10 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-
-        {/* Projects Section */}
         <div id="projects">
           <ProjectsSection />
         </div>
 
-        {/* Experience Section */}
         <div id="experience" className="min-h-screen flex items-center justify-center px-6">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-16 text-gradient-primary text-center">
@@ -143,7 +130,6 @@ export default function Portfolio() {
           </div>
         </div>
 
-        {/* Contact Section */}
         <div id="contact" className="min-h-screen flex items-center justify-center px-6">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-4xl font-bold mb-8 text-gradient-primary">

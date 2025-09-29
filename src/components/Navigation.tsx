@@ -20,33 +20,30 @@ export default function Navigation({ currentSection, onNavigate }: NavigationPro
 
   return (
     <>
-      {/* Desktop Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6">
-        <div className="flex justify-between items-center max-w-7xl mx-auto">
-          {/* Logo */}
-          <div 
-            className="text-2xl font-bold text-gradient-primary cursor-pointer hover-glow"
+        <div className="flex justify-between items-center mx-auto">
+          <div
+            className='flex cursor-pointer'
             onClick={() => onNavigate('home')}
           >
-            Portfolio
+            <img src="public\logo-transparent.png" width={40} height={40} />
           </div>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => onNavigate(item.id)}
-                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 ${
-                  currentSection === item.id
-                    ? 'text-primary glow-primary'
+                className={`relative px-4 py-2 text-sm font-medium transition-all duration-200 ${currentSection === item.id
+                    ? 'text-primary'
                     : 'text-foreground/80 hover:text-primary'
-                } hover:scale-105`}
+                  } hover:scale-105`}
               >
                 {item.label}
-                {currentSection === item.id && (
+                {/* Bugged */}
+                {/* {currentSection === item.id && (
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-primary animate-cyber-scan" />
-                )}
+                )} */}
               </button>
             ))}
           </div>
@@ -73,11 +70,10 @@ export default function Navigation({ currentSection, onNavigate }: NavigationPro
                     onNavigate(item.id);
                     setIsMenuOpen(false);
                   }}
-                  className={`text-left px-4 py-2 rounded-md transition-all duration-300 ${
-                    currentSection === item.id
+                  className={`text-left px-4 py-2 rounded-md transition-all duration-300 ${currentSection === item.id
                       ? 'text-primary bg-primary/10 glow-primary'
                       : 'text-foreground/80 hover:text-primary hover:bg-primary/5'
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </button>
