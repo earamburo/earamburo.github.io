@@ -26,7 +26,7 @@ export default function Navigation({ currentSection, onNavigate }: NavigationPro
             className='flex cursor-pointer'
             onClick={() => onNavigate('home')}
           >
-            <img src="public\logo-transparent.png" width={40} height={40} />
+            <img src="/logo-transparent.png" width={40} height={40} />
           </div>
 
           <div className="hidden md:flex space-x-8">
