@@ -10,13 +10,14 @@ export default function ContactMe({}) {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a
-                    href="mailto:alex@example.com"
+                    href="mailto:edwin.aramburo1@gmail.com"
                     className="inline-flex items-center px-8 py-4 bg-gradient-primary text-primary-foreground rounded-lg font-semibold hover:shadow-glow-primary transition-all duration-300"
                 >
                     Get In Touch
                 </a>
                 <a
-                    href="https://linkedin.com"
+                    href="https://linkedin.com/in/edwin-aramburo"
+                    target="_blank"
                     className="inline-flex items-center px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 hover:shadow-glow-primary transition-all duration-300"
                 >
                     LinkedIn
