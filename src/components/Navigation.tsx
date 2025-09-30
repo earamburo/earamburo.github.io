@@ -12,7 +12,6 @@ export default function Navigation({ currentSection, onNavigate }: NavigationPro
 
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
     { id: 'contact', label: 'Contact' },
