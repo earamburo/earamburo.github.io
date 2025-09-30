@@ -17,9 +17,20 @@ export default function Navigation({ currentSection, onNavigate }: NavigationPro
     { id: 'contact', label: 'Contact' },
   ];
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+
+  }, [])
+
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 p-6">
+      <nav className={`fixed top-0 left-0 right-0 z-50 p-6 ${ scrolled ? "bg-muted shadow-md" : "bg-transparent"}`}>
         <div className="flex justify-between items-center mx-auto">
           <div
             className='flex cursor-pointer'
@@ -34,8 +45,8 @@ export default function Navigation({ currentSection, onNavigate }: NavigationPro
                 key={item.id}
                 onClick={() => onNavigate(item.id)}
                 className={`relative px-4 py-2 text-sm font-medium transition-all duration-200 ${currentSection === item.id
-                    ? 'text-primary'
-                    : 'text-foreground/80 hover:text-primary'
+                  ? 'text-primary'
+                  : 'text-foreground/80 hover:text-primary'
                   } hover:scale-105`}
               >
                 {item.label}
@@ -70,8 +81,8 @@ export default function Navigation({ currentSection, onNavigate }: NavigationPro
                     setIsMenuOpen(false);
                   }}
                   className={`text-left px-4 py-2 rounded-md transition-all duration-300 ${currentSection === item.id
-                      ? 'text-primary bg-primary/10 glow-primary'
-                      : 'text-foreground/80 hover:text-primary hover:bg-primary/5'
+                    ? 'text-primary bg-primary/10 glow-primary'
+                    : 'text-foreground/80 hover:text-primary hover:bg-primary/5'
                     }`}
                 >
                   {item.label}

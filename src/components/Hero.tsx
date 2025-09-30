@@ -15,7 +15,7 @@ export default function Hero({ onNavigate }: HeroProps) {
   }
 
   return (
-    <section className="relative lg:min-h-screen flex flex-col justify-center items-center text-center px-6 py-6">
+    <section className="relative my-[5rem] lg:min-h-screen flex flex-col justify-center items-center text-center px-6 py-6">
       <div className="max-w-4xl mx-auto z-10">
         <div className="mb-6 animate-fade-in">
           <span className="text-lg text-white font-medium tracking-wider">
