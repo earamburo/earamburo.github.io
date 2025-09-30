@@ -80,14 +80,14 @@ export default function Experience({ }) {
 
 
     return (
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto my-[5rem]">
             <h2 className="text-4xl font-bold mb-16 text-gradient-primary text-center">
                 Experience
             </h2>
             <div className="space-y-8">
                 {experience.map((e: Experience, index: number) => {
                     return (
-                        <div className="hologram-panel p-8 rounded-2xl border-l-4 border-primary">
+                        <div className="hologram-panel p-8 rounded-2xl border-l-4 border-primary" key={`card-` + index}>
                             <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                                 <h3 className="text-2xl font-bold text-gradient-secondary">{e.title}</h3>
                                 <span className="text-primary font-medium">{e.dates}</span>
@@ -97,24 +97,30 @@ export default function Experience({ }) {
                             <div className="my-3">
                                 {e.description.map((point: string, index, number) => {
                                     return (
-                                        <p className="text-foreground/70 leading-relaxed">
-                                            {point}
-                                        </p>
+                                        <div className="mb-4">
+                                            <p className="text-foreground/70 leading-relaxed">
+                                                {point}
+                                            </p>
+                                        </div>
                                     )
                                 })}
                             </div>
-                            <div className="my-3">
-                                {e.technologies.map((tech: string, index: number) => {
-                                    return (
-                                        <span
-                                            key={index}
-                                            className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium border border-primary/20 mx-1"
-                                        >
-                                            {tech}
-                                        </span>
-                                    )
+                            <div className="my-3 flex-row">
+                                <div className="flex flex-row sm:flex-row flex-wrap md:items-start mb-4">
+                                    {e.technologies.map((tech: string, index: number) => {
+                                        return (
 
-                                })}
+                                            <span
+                                                key={index}
+                                                className="px-3 py-1 my-2 bg-primary/10 text-primary rounded-full text-xs font-medium border border-primary/20 mx-1 text-wrap"
+                                            >
+                                                {tech}
+                                            </span>
+                                        )
+
+                                    })}
+                                </div>
+
                             </div>
 
                         </div>
