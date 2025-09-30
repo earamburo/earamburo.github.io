@@ -5,7 +5,15 @@ interface HeroProps {
   onNavigate: (section: string) => void;
 }
 
+
 export default function Hero({ onNavigate }: HeroProps) {
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "./public/Edwin-Aramburo-Resume-SWE.pdf";
+    link.download = 'Edwin-Aramburo-Resume.pdf';
+    link.click();
+  }
+
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-6">
       <div className="max-w-4xl mx-auto z-10">
@@ -43,6 +51,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             variant="outline"
             size="lg"
             className="border-primary text-primary hover:bg-primary/10 hover:shadow-glow-primary px-8 py-4 text-lg"
+            onClick={() => downloadResume()}
           >
             Download Resume
             <Download className="ml-2 h-5 w-5" />
