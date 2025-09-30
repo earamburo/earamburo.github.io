@@ -15,7 +15,7 @@ export default function Hero({ onNavigate }: HeroProps) {
   }
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-6">
+    <section className="relative lg:min-h-screen flex flex-col justify-center items-center text-center px-6 py-6">
       <div className="max-w-4xl mx-auto z-10">
         <div className="mb-6 animate-fade-in">
           <span className="text-lg text-white font-medium tracking-wider">
@@ -58,10 +58,9 @@ export default function Hero({ onNavigate }: HeroProps) {
           </Button>
         </div>
 
-        {/* Scroll Indicator */}
         <div 
-          className="flex flex-col items-center cursor-pointer animate-float hover-glow"
-          onClick={() => onNavigate('about')}
+          className="flex flex-col items-center cursor-pointer animate-float hover-glow sm:hidden hidden sm:flex md:flex lg:flex"
+          onClick={() => onNavigate('projects')}
         >
           <span className="text-sm text-foreground/60 mb-2">Scroll to explore</span>
           <ChevronDown className="h-6 w-6 text-primary animate-bounce" />
