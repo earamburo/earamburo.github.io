@@ -1,16 +1,36 @@
 import ProjectCard from './ProjectCard';
-import dashboardImage from '@/assets/dashboard-ssh.png';
+import dashboardImage from '@/assets/project-dashboard.png';
 import voyixImage from '@/assets/voyix-sh.png'
 import scoImage from '@/assets/3dconfig.jpg'
+import kopeAgencyImage from '@/assets/kopeagency.png'
+import findAppImage from '@/assets/find-app-thumbnail.png'
 
 const projects = [
+  {
+    title: "Find App",
+    description:
+      "A mobile-first social app prototype that lets users discover and share their favorite local spots. Designed with an intuitive map interface and real-time filters, it combines geolocation with chat threads so friends can tag restaurants, bars, and experiences in their city.",
+    image: findAppImage, 
+    technologies: ["Figma, React Native", "Expo", "TypeScript", "Firebase"],
+    liveUrl: '/assets/find-app-prototype.mp4', 
+    githubUrl: '/assets/find-app-mockups.png', 
+  },
+  {
+    title: "Kope Agency Designs",
+    description:
+      "A modern design system and web experience built for a creative agency concept. Focused on clean typography, bold visuals, and responsive layouts, the designs highlight branding flexibility and deliver a polished user experience across desktop and mobile.",
+    image: kopeAgencyImage,
+    technologies: ["Figma", "Illustrator",,"React", "Next.js"],
+    liveUrl: '/assets/Kope-Agency.pdf', 
+    githubUrl: null,
+  },
   {
     title: "3D Interactive Self Checkout Unit",
     description: "An interactive web application that allows users to explore, customize, and visualize products in real time. Built with React and modern 3D rendering libraries, the configurator provides smooth rotation, zoom, and customization features, enabling users to see their choices come to life instantly.",
     image: scoImage,
     technologies: ["React", "Next.js", "TypeScript"],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://www.youtube.com/watch?v=1pKCyhj16AA",
+    githubUrl: "https://www.linkedin.com/pulse/ideation-creation-self-checkout-configurator-taylor-mcdonnell-mkp2e/",
     featured: true,
   },
   {
@@ -19,7 +39,7 @@ const projects = [
     image: dashboardImage,
     technologies: ["React", "React Native", "Next.js", "Victory.js", "Bootstap", "PostgreSQL"],
     liveUrl: "/assets/victory.mp4",
-    githubUrl: "#",
+    githubUrl: "/assets/new-dash.pdf",
   },
   {
     title: "NCR Voyix Rebrand",
@@ -27,7 +47,8 @@ const projects = [
     image: voyixImage,
     technologies: ["WordPress", "React.js"],
     liveUrl: "https://ncrvoyix.com/",
-    githubUrl: "#",
+    githubUrl: null,
+    featured: true
   },
 ];
 
@@ -40,7 +61,7 @@ export default function ProjectsSection() {
             Featured Projects
           </h2>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-            A showcase of my latest work combining cutting-edge technology 
+            A showcase of my latest work combining cutting-edge technology
             with thoughtful design to create memorable user experiences.
           </p>
         </div>
