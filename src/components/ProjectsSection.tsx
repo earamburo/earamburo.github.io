@@ -18,7 +18,7 @@ const projects = [
     description: "A comprehensive analytics dashboard featuring real-time data visualizations built with Victory.js and React. Includes interactive charts, particle systems, and responsive design.",
     image: dashboardImage,
     technologies: ["React", "React Native", "Next.js", "Victory.js", "Bootstap", "PostgreSQL"],
-    liveUrl: "/assets/victory.mp4",
+    liveUrl: "portfolio/assets/victory.mp4",
     githubUrl: "#",
   },
   {
