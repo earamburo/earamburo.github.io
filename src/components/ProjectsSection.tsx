@@ -1,18 +1,13 @@
 import ProjectCard from './ProjectCard';
-
-// Import project images
-import dashboardImage from '@/assets/project-dashboard.jpg';
-import ecommerceImage from '@/assets/project-ecommerce.jpg';
-import arImage from '@/assets/project-ar.jpg';
-import designSystemImage from '@/assets/project-design-system.jpg';
-import collaborationImage from '@/assets/project-collaboration.jpg';
-import aiContentImage from '@/assets/project-ai-content.jpg';
+import dashboardImage from '@/assets/dashboard-ssh.png';
+import voyixImage from '@/assets/voyix-sh.png'
+import scoImage from '@/assets/3dconfig.jpg'
 
 const projects = [
   {
     title: "3D Interactive Self Checkout Unit",
     description: "An interactive web application that allows users to explore, customize, and visualize products in real time. Built with React and modern 3D rendering libraries, the configurator provides smooth rotation, zoom, and customization features, enabling users to see their choices come to life instantly.",
-    image: dashboardImage,
+    image: scoImage,
     technologies: ["React", "Next.js", "TypeScript"],
     liveUrl: "#",
     githubUrl: "#",
@@ -21,15 +16,15 @@ const projects = [
   {
     title: "Victory.js Interactive Dashboard",
     description: "A comprehensive analytics dashboard featuring real-time data visualizations built with Victory.js and React. Includes interactive charts, particle systems, and responsive design.",
-    image: ecommerceImage,
-    technologies: ["React", "Next.js", "Victory.js", "Bootstap", "PostgreSQL"],
-    liveUrl: "#",
+    image: dashboardImage,
+    technologies: ["React", "React Native", "Next.js", "Victory.js", "Bootstap", "PostgreSQL"],
+    liveUrl: "/assets/victory.mp4",
     githubUrl: "#",
   },
   {
     title: "NCR Voyix Rebrand",
     description: "Augmented reality web application allowing users to visualize products in their environment using WebXR APIs and machine learning for object detection.",
-    image: arImage,
+    image: voyixImage,
     technologies: ["WordPress", "React.js"],
     liveUrl: "https://ncrvoyix.com/",
     githubUrl: "#",

@@ -39,6 +39,8 @@ export default function Portfolio() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  
+
   return (
     <div className="relative min-h-screen">
       <Scene3D />

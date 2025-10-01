@@ -14,6 +14,8 @@ export default function Hero({ onNavigate }: HeroProps) {
     link.click();
   }
 
+
+
   return (
     <section className="relative my-[5rem] lg:min-h-screen flex flex-col justify-center items-center text-center px-6 py-6">
       <div className="max-w-4xl mx-auto z-10">
