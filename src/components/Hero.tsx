@@ -29,7 +29,7 @@ export default function Hero({ onNavigate }: HeroProps) {
         </h1>
 
         <h2 className="text-2xl text-white md:text-3xl font-light mb-8">
-          Frontend Engineer & UI/UX Designer
+          Fullstack Software Engineer & UI/UX Designer
         </h2>
 
         <p className="text-xl text-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed">
