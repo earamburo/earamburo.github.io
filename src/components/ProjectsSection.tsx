@@ -81,14 +81,14 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <button className="relative inline-flex items-center px-8 py-4 text-lg font-semibold text-primary border-2 border-primary rounded-lg bg-transparent hover:bg-primary/10 transition-all duration-300 glow-primary group">
             <span>View All Projects</span>
             <div className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1">
               →
             </div>
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

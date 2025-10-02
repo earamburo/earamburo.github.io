@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Video } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
@@ -63,7 +63,7 @@ export default function ProjectCard({
                 asChild
               >
                 <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                  <Github className="h-4 w-4" />
+                  <Video className="h-4 w-4" />
                 </a>
               </Button>
             )}
