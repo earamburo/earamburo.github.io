@@ -30,13 +30,14 @@ export default function Navigation({ currentSection, onNavigate }: NavigationPro
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 p-6 ${ scrolled ? "bg-muted shadow-md" : "bg-transparent"}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 p-4 ${ scrolled ? "bg-muted shadow-md" : "bg-transparent"}`}>
         <div className="flex justify-between items-center mx-auto">
           <div
             className='flex cursor-pointer'
             onClick={() => onNavigate('home')}
           >
             <img src="/logo-transparent.png" width={40} height={40} />
+            <p>v1.0</p>
           </div>
 
           <div className="hidden md:flex space-x-8">
