@@ -4,8 +4,18 @@ import voyixImage from '@/assets/voyix-sh.png'
 import scoImage from '@/assets/3dconfig.jpg'
 import kopeAgencyImage from '@/assets/kopeagency.png'
 import findAppImage from '@/assets/find-app-thumbnail.png'
+import matrixImage from '@/assets/matrix.png'
 
 const projects = [
+   {
+    title: "Matrix terminal",
+    description:
+      "A text-based adventure game inspired by The Matrix where your choices shape your destiny. Take the red or blue pill and navigate through branching storylines with multiple endings based on your decisions",
+    image: matrixImage, 
+    technologies: ["Python", "Pyodide"],
+    liveUrl: '/matrix', 
+    githubUrl: '', 
+  },
   {
     title: "Find App",
     description:
