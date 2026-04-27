@@ -2,7 +2,10 @@
 
 Personal portfolio site for Andres Aramburo, a Software Solutions Engineer & Designer with 5 years building enterprise platforms, 3D tools, mobile apps, and design systems. Built with a Linear.app-inspired aesthetic — dark, minimal, and fast.
 
-**Live site:** [earamburo.github.io](https://earamburo.github.io)
+- Vite
+- TypeScript
+- React
+- Tailwind CSS
 
 ---
 
