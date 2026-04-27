@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Scene3D from './Scene3D';
 import Navigation from './Navigation';
 import Hero from './Hero';
+import Skills from './Skills';
 import ProjectsSection from './ProjectsSection';
 import Experience from './Experience';
 import ContactMe from './ContactMe';
@@ -11,7 +12,6 @@ export default function Portfolio() {
 
   const handleNavigate = (section: string) => {
     setCurrentSection(section);
-    
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -20,9 +20,8 @@ export default function Portfolio() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'projects', 'experience', 'contact'];
+      const sections = ['home', 'skills', 'projects', 'experience', 'contact'];
       const scrollPosition = window.scrollY + window.innerHeight / 2;
-
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -34,12 +33,9 @@ export default function Portfolio() {
         }
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  
 
   return (
     <div className="relative min-h-screen">
@@ -49,14 +45,17 @@ export default function Portfolio() {
         <div id="home">
           <Hero onNavigate={handleNavigate} />
         </div>
+        <div id="skills">
+          <Skills />
+        </div>
         <div id="projects">
           <ProjectsSection />
         </div>
         <div id="experience" className="min-h-screen flex items-center justify-center px-6">
-          <Experience/>
+          <Experience />
         </div>
         <div id="contact" className="min-h-screen flex items-center justify-center px-6">
-          <ContactMe/>
+          <ContactMe />
         </div>
       </main>
     </div>

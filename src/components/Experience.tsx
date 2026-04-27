@@ -81,7 +81,7 @@ export default function Experience({ }) {
 
     return (
         <div className="max-w-6xl mx-auto my-[5rem]">
-            <h2 className="text-4xl font-bold mb-16 text-gradient-primary text-center">
+            <h2 className="text-4xl font-bold mb-16 text-foreground text-center">
                 Experience
             </h2>
             <div className="space-y-8">
@@ -89,7 +89,7 @@ export default function Experience({ }) {
                     return (
                         <div className="hologram-panel p-8 rounded-2xl border-l-4 border-primary" key={`card-` + index}>
                             <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                                <h3 className="text-2xl font-bold text-gradient-secondary">{e.title}</h3>
+                                <h3 className="text-2xl font-bold text-secondary">{e.title}</h3>
                                 <span className="text-primary font-medium">{e.dates}</span>
                             </div>
                             <h4 className="text-lg text-foreground/80 mb-4">{e.company}</h4>

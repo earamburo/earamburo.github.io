@@ -2,114 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Futuristic Digital Workspace Design System */
+html { scroll-behavior: smooth; }
+
+/* Terminal Hacker Design System */
 
 @layer base {
   :root {
-    /* Deep Space Background */
-    --background: 225 39% 5%;
-    --foreground: 200 20% 98%;
+    /* Deep Terminal Background — subtle green tint */
+    --background: 150 20% 3%;
+    --foreground: 150 10% 92%;
 
     /* Card System */
-    --card: 225 25% 8%;
-    --card-foreground: 200 15% 95%;
+    --card: 150 15% 6%;
+    --card-foreground: 150 8% 90%;
 
     /* Interactive Elements */
-    --popover: 225 30% 6%;
-    --popover-foreground: 200 20% 98%;
+    --popover: 150 18% 5%;
+    --popover-foreground: 150 10% 92%;
 
     /* Neon Cyan Primary */
     --primary: 180 100% 50%;
-    --primary-foreground: 225 39% 5%;
+    --primary-foreground: 150 20% 3%;
 
-    /* Electric Purple Secondary */
-    --secondary: 270 100% 70%;
-    --secondary-foreground: 225 39% 5%;
+    /* Terminal Green Secondary */
+    --secondary: 135 100% 50%;
+    --secondary-foreground: 150 20% 3%;
 
     /* Muted Tech Elements */
-    --muted: 225 20% 12%;
-    --muted-foreground: 200 8% 70%;
+    --muted: 150 12% 10%;
+    --muted-foreground: 150 5% 55%;
 
-    /* Accent Glow */
-    --accent: 210 100% 60%;
-    --accent-foreground:225 39% 5%;
+    /* Accent — purple, used sparingly on hover states */
+    --accent: 270 80% 65%;
+    --accent-foreground: 150 20% 3%;
 
-    /* Danger/Error */
-    --destructive: 0 100% 60%;
-    --destructive-foreground: 200 20% 98%;
+    /* Danger/Error — terminal red */
+    --destructive: 0 90% 55%;
+    --destructive-foreground: 150 10% 92%;
 
     /* Borders & Inputs */
-    --border: 225 15% 20%;
-    --input: 225 20% 15%;
+    --border: 150 15% 16%;
+    --input: 150 12% 12%;
     --ring: 180 100% 50%;
 
     /* Radius for sleek UI */
     --radius: 0.75rem;
 
-    /* Sidebar (not used but keeping for compatibility) */
-    --sidebar-background: 225 35% 6%;
-    --sidebar-foreground: 200 15% 90%;
+    /* Sidebar */
+    --sidebar-background: 150 18% 4%;
+    --sidebar-foreground: 150 8% 88%;
     --sidebar-primary: 180 100% 50%;
-    --sidebar-primary-foreground: 225 39% 5%;
-    --sidebar-accent: 270 100% 70%;
-    --sidebar-accent-foreground: 225 39% 5%;
-    --sidebar-border: 225 15% 20%;
+    --sidebar-primary-foreground: 150 20% 3%;
+    --sidebar-accent: 135 100% 50%;
+    --sidebar-accent-foreground: 150 20% 3%;
+    --sidebar-border: 150 15% 16%;
     --sidebar-ring: 180 100% 50%;
 
     /* Custom Portfolio Variables */
     --neon-cyan: 180 100% 50%;
-    --neon-purple: 270 100% 70%;
-    --neon-pink: 320 100% 70%;
+    --terminal-green: 135 100% 50%;
+    --neon-purple: 270 80% 65%;
+    --terminal-red: 0 90% 55%;
     --electric-blue: 210 100% 60%;
-    --deep-space: 225 39% 5%;
-    --space-gray: 225 20% 12%;
+    --deep-space: 150 20% 3%;
+    --space-gray: 150 12% 10%;
     --glow-intensity: 0.5;
-    
+
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-cyan)), hsl(var(--electric-blue)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-pink)));
-    --gradient-bg: linear-gradient(180deg, hsl(var(--deep-space)), hsl(225 35% 8%));
-    --gradient-card: linear-gradient(145deg, hsl(var(--space-gray)), hsl(225 15% 15%));
-    
+    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-cyan)), hsl(var(--terminal-green)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--terminal-green)), hsl(var(--electric-blue)));
+    --gradient-bg: linear-gradient(180deg, hsl(var(--deep-space)), hsl(150 15% 5%));
+    --gradient-card: linear-gradient(145deg, hsl(var(--space-gray)), hsl(150 10% 12%));
+
     /* Shadows & Glows */
     --glow-primary: 0 0 20px hsl(var(--neon-cyan) / var(--glow-intensity));
-    --glow-secondary: 0 0 20px hsl(var(--neon-purple) / var(--glow-intensity));
-    --glow-accent: 0 0 30px hsl(var(--neon-pink) / 0.3);
-    --shadow-elegant: 0 10px 30px -5px hsl(225 39% 3% / 0.8);
-    
+    --glow-secondary: 0 0 20px hsl(var(--terminal-green) / var(--glow-intensity));
+    --glow-accent: 0 0 30px hsl(var(--neon-purple) / 0.3);
+    --shadow-elegant: 0 10px 30px -5px hsl(150 20% 2% / 0.9);
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-glow: box-shadow 0.3s ease-in-out;
   }
 
   .dark {
-    /* Dark mode uses the same futuristic theme */
-    --background: 225 39% 5%;
-    --foreground: 200 20% 98%;
-    --card: 225 25% 8%;
-    --card-foreground: 200 15% 95%;
-    --popover: 225 30% 6%;
-    --popover-foreground: 200 20% 98%;
+    --background: 150 20% 3%;
+    --foreground: 150 10% 92%;
+    --card: 150 15% 6%;
+    --card-foreground: 150 8% 90%;
+    --popover: 150 18% 5%;
+    --popover-foreground: 150 10% 92%;
     --primary: 180 100% 50%;
-    --primary-foreground: 225 39% 5%;
-    --secondary: 270 100% 70%;
-    --secondary-foreground: 225 39% 5%;
-    --muted: 225 20% 12%;
-    --muted-foreground: 200 8% 70%;
-    --accent: 300 100% 60%;
-    --accent-foreground: 225 39% 5%;
-    --destructive: 0 100% 60%;
-    --destructive-foreground: 200 20% 98%;
-    --border: 225 15% 20%;
-    --input: 225 20% 15%;
+    --primary-foreground: 150 20% 3%;
+    --secondary: 135 100% 50%;
+    --secondary-foreground: 150 20% 3%;
+    --muted: 150 12% 10%;
+    --muted-foreground: 150 5% 55%;
+    --accent: 270 80% 65%;
+    --accent-foreground: 150 20% 3%;
+    --destructive: 0 90% 55%;
+    --destructive-foreground: 150 10% 92%;
+    --border: 150 15% 16%;
+    --input: 150 12% 12%;
     --ring: 180 100% 50%;
-    --sidebar-background: 225 35% 6%;
-    --sidebar-foreground: 200 15% 90%;
+    --sidebar-background: 150 18% 4%;
+    --sidebar-foreground: 150 8% 88%;
     --sidebar-primary: 180 100% 50%;
-    --sidebar-primary-foreground: 225 39% 5%;
-    --sidebar-accent: 270 100% 70%;
-    --sidebar-accent-foreground: 225 39% 5%;
-    --sidebar-border: 225 15% 20%;
+    --sidebar-primary-foreground: 150 20% 3%;
+    --sidebar-accent: 135 100% 50%;
+    --sidebar-accent-foreground: 150 20% 3%;
+    --sidebar-border: 150 15% 16%;
     --sidebar-ring: 180 100% 50%;
   }
 }
@@ -121,7 +123,6 @@
 
   body {
     @apply bg-background text-foreground overflow-x-hidden;
-    background: var(--gradient-bg);
     font-family: 'Inter', system-ui, sans-serif;
   }
   
@@ -135,7 +136,7 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    background: var(--gradient-primary);
+    background: hsl(var(--primary) / 0.6);
     border-radius: 4px;
   }
   
@@ -155,7 +156,12 @@
     box-shadow: var(--glow-secondary);
     transition: var(--transition-glow);
   }
-  
+
+  .glow-green {
+    box-shadow: 0 0 20px hsl(var(--terminal-green) / 0.5);
+    transition: var(--transition-glow);
+  }
+
   .glow-accent {
     box-shadow: var(--glow-accent);
     transition: var(--transition-glow);
@@ -203,5 +209,53 @@
     backdrop-filter: blur(20px);
     border: 1px solid hsl(var(--border) / 0.3);
     box-shadow: var(--shadow-elegant);
+  }
+
+  /* Glitch text effect */
+  .glitch-text {
+    position: relative;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-bg);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .glitch-text::before {
+    left: 2px;
+    text-shadow: -1px 0 hsl(var(--terminal-green));
+    animation: glitch-1 4s infinite linear;
+    opacity: 0;
+  }
+
+  .glitch-text::after {
+    left: -2px;
+    text-shadow: 1px 0 hsl(var(--neon-cyan));
+    animation: glitch-2 4s infinite linear;
+    opacity: 0;
+  }
+
+  @keyframes glitch-1 {
+    0%, 90%, 100% { opacity: 0; transform: none; }
+    91% { opacity: 0.8; transform: translateX(-2px) skewX(-1deg); }
+    93% { opacity: 0; }
+    95% { opacity: 0.6; transform: translateX(2px); }
+    97% { opacity: 0; }
+  }
+
+  @keyframes glitch-2 {
+    0%, 88%, 100% { opacity: 0; transform: none; }
+    89% { opacity: 0.7; transform: translateX(2px) skewX(1deg); }
+    91% { opacity: 0; }
+    94% { opacity: 0.5; transform: translateX(-1px); }
+    96% { opacity: 0; }
   }
 }

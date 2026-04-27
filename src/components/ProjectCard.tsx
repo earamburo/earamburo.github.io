@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Video } from 'lucide-react';
+import { ExternalLink, Video } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
@@ -28,7 +28,7 @@ export default function ProjectCard({
       
       {featured && (
         <div className="absolute top-4 right-4 z-10">
-          <span className="bg-gradient-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold">
+          <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold font-mono">
             FEATURED
           </span>
         </div>
@@ -40,7 +40,7 @@ export default function ProjectCard({
           alt={title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
+        <div className="absolute bottom-0 inset-x-0 h-1/2 bg-card/70" />
         
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="flex gap-3">
@@ -72,7 +72,7 @@ export default function ProjectCard({
       </div>
 
       <CardContent className="p-6">
-        <h3 className="text-xl font-bold mb-3 text-gradient-primary group-hover:text-gradient-secondary transition-all duration-300">
+        <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
           {title}
         </h3>
 

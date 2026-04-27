@@ -60,8 +60,13 @@ export default {
         // Custom Portfolio Colors
         neon: {
           cyan: "hsl(var(--neon-cyan))",
+          green: "hsl(var(--terminal-green))",
           purple: "hsl(var(--neon-purple))",
-          pink: "hsl(var(--neon-pink))",
+          red: "hsl(var(--terminal-red))",
+        },
+        terminal: {
+          green: "hsl(var(--terminal-green))",
+          red: "hsl(var(--terminal-red))",
         },
         electric: {
           blue: "hsl(var(--electric-blue))",

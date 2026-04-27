@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import PortfolioV2 from "./pages/PortfolioV2";
 import { MatrixGame } from './components/matrix/matrixgame'
 
 const queryClient = new QueryClient();
@@ -16,9 +17,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<PortfolioV2 />} />
+          <Route path="/v1" element={<Index />} />
           <Route path="/matrix" element={<MatrixGame />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
