@@ -28,9 +28,9 @@ function DetailPanel({ exp }: { exp: ExperienceItem }) {
 
 export default function ExperienceTimeline() {
   const [activeIdx, setActiveIdx] = useState(0);
-  const headRef                   = useScrollReveal<HTMLDivElement>();
+  const headRef = useScrollReveal<HTMLDivElement>();
 
-  const fillPct = (activeIdx / (experiences.length - 1)) * 100;
+  const fillPct = ((activeIdx + 1) / experiences.length) * 100;
 
   return (
     <section id="experience" className="experience-section">
