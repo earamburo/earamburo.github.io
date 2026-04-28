@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import ContactModal from './ContactModal';
 
 export default function ContactV2() {
   const ref = useScrollReveal<HTMLDivElement>();
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
+    <>
     <section id="contact" className="contact-section">
       <div className="contact-inner reveal" ref={ref}>
         <div className="sec-tag" style={{ display: 'inline-flex', marginBottom: '24px' }}>
@@ -17,9 +21,9 @@ export default function ContactV2() {
           Reach out — I reply fast.
         </p>
         <div className="contact-links">
-          <a href="mailto:edwin.aramburo1@gmail.com" className="btn-primary">
+          <button className="btn-primary" onClick={() => setModalOpen(true)}>
             Get In Touch
-          </a>
+          </button>
           <a
             href="https://linkedin.com/in/edwin-aramburo"
             target="_blank"
@@ -39,5 +43,8 @@ export default function ContactV2() {
         </div>
       </div>
     </section>
+
+    {modalOpen && <ContactModal onClose={() => setModalOpen(false)} />}
+    </>
   );
 }

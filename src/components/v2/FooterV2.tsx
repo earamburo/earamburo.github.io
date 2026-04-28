@@ -6,7 +6,7 @@ export default function FooterV2() {
         <div className="foot-links">
           <a href="mailto:edwin.aramburo1@gmail.com">Email</a>
           <a href="https://linkedin.com/in/edwin-aramburo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="/Edwin-Aramburo-Resume-SWE.pdf" download>Resume</a>
+          <a href="/Andres-Aramburo-Resume-SWE_2026.pdf" download>Resume</a>
         </div>
       </div>
     </footer>

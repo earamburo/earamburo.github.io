@@ -268,6 +268,10 @@
   background: rgba(255,255,255,.08); border-color: var(--v2-b3); color: var(--v2-text-1);
 }
 
+.pv2 .hc-btn:disabled {
+  opacity: 0.3; cursor: not-allowed; pointer-events: none;
+}
+
 .pv2 .hero-car-vp {
   overflow: hidden; border-radius: 20px; cursor: grab;
 }
@@ -275,13 +279,14 @@
 .pv2 .hero-car-vp.grabbing { cursor: grabbing; }
 
 .pv2 .hero-car-track {
-  display: flex; gap: 12px;
+  display: flex; 
+  gap: 12px;
   transition: transform 0.55s cubic-bezier(0.16,1,0.3,1);
   user-select: none;
 }
 
 .pv2 .hc-card {
-  flex: 0 0 calc(100% - 52px);
+  flex: 0 0 100%;
   height: 460px;
   border-radius: 18px; overflow: hidden; position: relative;
   border: 1px solid var(--v2-b1); background: var(--v2-bg-2);
@@ -379,7 +384,7 @@
 }
 
 /* ── PROJECTS CAROUSEL ───────────────────────────────────────────────── */
-.pv2 .projects-section { padding: 100px 0; overflow: hidden; }
+.pv2 .projects-section { padding: 100px var(--v2-pad); overflow: hidden; }
 
 .pv2 .projects-header {
   max-width: var(--v2-maxw); margin: 0 auto;

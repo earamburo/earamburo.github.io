@@ -13,10 +13,11 @@ export default function PortfolioV2() {
       <NavV2 />
       <main>
         <HeroV2 />
+        <ContactV2 />
         <SkillsV2 />
         <ExperienceTimeline />
         <ProjectsCarousel />
-        <ContactV2 />
+        
       </main>
       <FooterV2 />
     </div>
